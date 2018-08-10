@@ -1,0 +1,1293 @@
+/*
+ Theme Name:   STEM Playground Child Theme
+ Description:  Corporate Child Theme
+ Author:       Uptown Codes
+ Author URI:   http://www.uptowncode.com
+ Template:     themify-corporate
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/* ----------- LESS Mixing /* ----------- */
+/* --------- End LESS Mixing /* --------- */
+@import url(https://fonts.googleapis.com/css?family=Dosis:700);
+@font-face {
+  font-family: "SAF";
+  src: url("assets/font/SAF.eot?") format("eot"), url("assets/font/SAF.woff") format("woff"), url("assets/font/SAF.ttf") format("truetype"), url("assets/font/SAF.svg#SAF") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("assets/font/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Ubuntu;
+  padding: 1em 0 .2em;
+  margin: 0;
+  line-height: 1.2em;
+}
+.uc-custom h1,
+.uc-custom h2,
+.uc-custom h3,
+.uc-custom h4,
+.uc-custom h5,
+.uc-custom h6 {
+  font-family: SAF;
+  padding: 1em 0 .2em;
+  line-height: 1.2em;
+}
+p {
+  margin: 0 0 1em;
+}
+ul,
+ol {
+  margin: 0 0 1em 1.6em;
+}
+li {
+  margin-bottom: .5em;
+  padding: 0;
+  line-height: 1.5em;
+}
+label {
+  cursor: pointer;
+}
+label.error {
+  cursor: auto;
+  color: #F00;
+}
+.form-title {
+  padding: 1.2em 0 0;
+  margin: 0;
+}
+.uc-field {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin: .5em 0;
+  text-align: left;
+}
+.uc-field .label {
+  padding: 10px 0px;
+  vertical-align: top;
+}
+@media (min-width: 768px) {
+  .uc-field .label {
+    display: table-cell;
+    width: 35%;
+  }
+}
+.uc-field .label label {
+  cursor: default;
+}
+.uc-field .field {
+  padding: 5px 0px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .uc-field .field {
+    display: table-cell;
+    width: 65%;
+  }
+}
+.uc-field .field input[type="text"],
+.uc-field .field input[type="password"],
+.uc-field .field input[type="email"],
+.uc-field .field textarea {
+  width: 100%;
+  margin: 0;
+}
+.uc-field .field select {
+  width: 100%;
+  background-color: #eaf3f7;
+  border: none;
+  padding: .5em;
+  margin: 0;
+}
+.uc-field .field input[type=checkbox],
+.uc-field .field input[type=radio] {
+  border: 1px solid #b4b9be;
+  background: #fff;
+  cursor: pointer;
+}
+.uc-radio .field {
+  padding: 10px 0px 10px 0px;
+}
+.uc-radio .input input {
+  margin: 3px 8px 0px 5px;
+}
+.uc-radio .input label {
+  margin-right: 20px;
+}
+.school-search {
+  display: none;
+  overflow: hidden;
+}
+.school-search .school-search-results-container {
+  padding: 0 0 1em;
+}
+.school-search .school-search-results-container .school-search-results {
+  padding: 1em 0;
+}
+.school-search .school-search-results-container .school-search-save {
+  display: none;
+}
+.school-info {
+  padding: 2em 0;
+}
+.school-info.hidden {
+  display: none;
+}
+input.button-right {
+  margin-right: .5em;
+}
+.uc-table-container {
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+.uc-table {
+  width: 100%;
+  border-spacing: 0px;
+  border-color: #ddd;
+  border-width: 0 0 1px 1px;
+  border-style: solid;
+}
+.uc-table tr {
+  -webkit-transition: background-color 300ms linear;
+  -moz-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  -o-transition: background-color 300ms linear;
+}
+.uc-table tr.row-update {
+  background-color: transparent !important;
+}
+.uc-table tr.editing-post {
+  display: none;
+}
+.uc-table th {
+  background-color: #4CAF50;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  color: white;
+}
+.uc-table th,
+.uc-table td {
+  text-align: center;
+  padding: 8px;
+}
+.uc-table th.textleft,
+.uc-table td.textleft {
+  text-align: left;
+}
+.uc-table tr.new-row td,
+.uc-table tr.row-update td {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.uc-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.uc-table td {
+  border-color: #ddd;
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+  height: 100%;
+}
+.uc-table .jediting {
+  padding: 0 !important;
+}
+.uc-table .jedit-input {
+  width: 100%;
+  height: 52px;
+  margin: 0;
+  padding: 0 8px;
+  border: 0;
+  box-sizing: border-box;
+  background-color: #eaf3f7;
+}
+button {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.uc-collapsible {
+  background-color: #df7332;
+  color: white;
+  margin: 2px 0 0;
+  padding: 10px;
+  cursor: pointer;
+}
+.uc-collapsible span {
+  display: block;
+  float: right;
+  padding: 16px;
+  background: url(assets/img/minus.png) center center no-repeat;
+}
+.uc-collapsible.collapsed span {
+  background: url(assets/img/plus.png) center center no-repeat;
+}
+.uc-collapsible-content {
+  display: none;
+  padding: 10px;
+  border: 1px solid #CECECE;
+}
+.alert-container {
+  display: none;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  text-align: left;
+}
+label.alert,
+div.alert {
+  display: block !important;
+  padding: 13px 12px 12px 43px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: normal;
+  color: white;
+  background-color: #2ba6cb;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 6px;
+  margin-bottom: 6px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  text-shadow: 0px -1px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+label.alert:before,
+div.alert:before {
+  content: "\00a0";
+  display: block;
+  position: absolute;
+  left: 12px;
+  background-image: url('assets/img/icon.png');
+  background-position: -8px -8px;
+  width: 30px;
+  height: 25px;
+  margin-top: -2px;
+}
+label.alert.alert-warning,
+div.alert.alert-warning {
+  background-color: #F5B709;
+}
+label.alert.alert-warning:before,
+div.alert.alert-warning:before {
+  background-position: -88px -8px;
+}
+label.alert.alert-caution,
+div.alert.alert-caution {
+  background-color: #c60f13;
+}
+label.alert.alert-caution:before,
+div.alert.alert-caution:before {
+  background-position: -128px -8px;
+}
+label.alert.alert-success,
+div.alert.alert-success {
+  background-color: #18BF15;
+}
+label.alert.alert-success:before,
+div.alert.alert-success:before {
+  background-position: -48px -8px;
+}
+.activities-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+.activities-container .activity-card {
+  float: left;
+  width: 25%;
+  min-width: 188px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.activities-container .activity-card .league-challenge-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/img/lc-activity.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.activities-container .activity-card a {
+  text-decoration: none;
+}
+.activities-container .activity-card a .activity {
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #7C7C7C;
+  text-align: center;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.activities-container .activity-card a .activity:hover .activity-image-container {
+  background-color: #FF6600;
+}
+.activities-container .activity-card a .activity .activity-image-container {
+  position: relative;
+  -webkit-transition: all 100ms linear;
+  -moz-transition: all 100ms linear;
+  -ms-transition: all 100ms linear;
+  -o-transition: all 100ms linear;
+  width: 100%;
+  height: 100px;
+  background-color: #99CC33;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.activities-container .activity-card a .activity .activity-image-container .activity-image {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.activities-container .activity-card a .activity .activity-title {
+  border-top: 2px solid #5F5F5F;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2em;
+  padding: .5em;
+}
+.activities-container .activity-card a .activity .separator {
+  border-bottom: 1px solid #000;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.activities-container .activity-card a .activity .activity-description {
+  font-size: 13px;
+  line-height: 1.2em;
+  text-align: justify;
+  padding: .6em;
+}
+.activities-container .activity-card a .activity .league-challenge-label {
+  color: red;
+  text-align: center;
+  position: absolute;
+  bottom: .6em;
+  left: 0;
+  width: 100%;
+}
+.clear {
+  clear: both;
+}
+.uc-drag-container {
+  margin: 20px 0;
+  padding: 5px 0;
+  line-height: 1.2em;
+}
+.uc-drag-container.group-container {
+  border-top: 1px solid #aaa;
+}
+.uc-drag-container .uc-drag-container-label {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  padding: .2em;
+}
+.uc-drag-container .uc-drag-draggable-container {
+  padding: 0px 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.uc-drag-container .uc-drag-draggable-container .uc-drag {
+  width: 25% !important;
+  text-align: center;
+  padding: 5px;
+  color: white;
+  float: left;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+.uc-drag-container .uc-drag-draggable-container .uc-drag .uc-drag-inner {
+  line-height: 1.2em;
+  border: 1px solid #000000;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #99CA3D;
+  background: -webkit-gradient(linear, left top, left bottom, from(#99CA3D), to(#81AE2C));
+  background: -webkit-linear-gradient(top, #99CA3D, #81AE2C);
+  background: -moz-linear-gradient(top, #99CA3D, #81AE2C);
+  background: -ms-linear-gradient(top, #99CA3D, #81AE2C);
+  background: -o-linear-gradient(top, #99CA3D, #81AE2C);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.uc-drag-container .uc-drag-draggable-container .uc-drag .uc-drag-inner.m {
+  background-color: #8DD3FD;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8DD3FD), to(#388AD0));
+  background: -webkit-linear-gradient(top, #8DD3FD, #388AD0);
+  background: -moz-linear-gradient(top, #8DD3FD, #388AD0);
+  background: -ms-linear-gradient(top, #8DD3FD, #388AD0);
+  background: -o-linear-gradient(top, #8DD3FD, #388AD0);
+}
+.uc-drag-container .uc-drag-draggable-container .uc-drag .uc-drag-inner.f {
+  background-color: #FF9AC4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF9AC4), to(#AF4F78));
+  background: -webkit-linear-gradient(top, #FF9AC4, #AF4F78);
+  background: -moz-linear-gradient(top, #FF9AC4, #AF4F78);
+  background: -ms-linear-gradient(top, #FF9AC4, #AF4F78);
+  background: -o-linear-gradient(top, #FF9AC4, #AF4F78);
+}
+.uc-drag-container .uc-group-score {
+  margin: 5px 0;
+  padding: 0 10px;
+  text-align: center;
+}
+.uc-drag-container .uc-group-score .score {
+  font-size: 20px;
+}
+.uc-drag-container.empty .uc-group-score {
+  display: none;
+}
+.uc-drag-container.uc-drag-container-editable {
+  border: 1px solid #1A6718;
+  background-color: #C9FFC8;
+  -webkit-transition: background-color 100ms linear;
+  -moz-transition: background-color 100ms linear;
+  -ms-transition: background-color 100ms linear;
+  -o-transition: background-color 100ms linear;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.uc-drag-container.uc-drag-container-editable.hovered {
+  background-color: #94F593;
+}
+.uc-drag-container.uc-drag-container-editable .uc-drag .uc-drag-inner {
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.uc-drag-container.uc-drag-container-editable .uc-drag.ui-draggable-dragging .uc-drag-inner,
+.uc-drag-container.uc-drag-container-editable .uc-drag .uc-drag-inner:active {
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  -webkit-box-shadow: 3px 5px 15px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 5px 15px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 5px 15px 0px rgba(0, 0, 0, 0.5);
+}
+.uc-drag-container.uc-drag-container-editable .uc-drag.ui-draggable-dragging .uc-drag-inner,
+.uc-drag-container.uc-drag-container-editable .uc-drag .uc-drag-inner:active,
+.uc-drag-container.uc-drag-container-editable .uc-drag .uc-drag-inner:hover {
+  background-image: none;
+  background-color: #81AE2C;
+}
+.uc-drag-container.uc-drag-container-editable .uc-drag.ui-draggable-dragging .uc-drag-inner.m,
+.uc-drag-container.uc-drag-container-editable .uc-drag .uc-drag-inner:active.m,
+.uc-drag-container.uc-drag-container-editable .uc-drag .uc-drag-inner:hover.m {
+  background-image: none;
+  background-color: #388AD0;
+}
+.uc-drag-container.uc-drag-container-editable .uc-drag.ui-draggable-dragging .uc-drag-inner.f,
+.uc-drag-container.uc-drag-container-editable .uc-drag .uc-drag-inner:active.f,
+.uc-drag-container.uc-drag-container-editable .uc-drag .uc-drag-inner:hover.f {
+  background-image: none;
+  background-color: #AF4F78;
+}
+.uc-drag-container.uc-drag-container-editable.student-container {
+  background-color: #FEFFD4;
+  border: 1px solid #969800;
+}
+.uc-drag-container.uc-drag-container-editable.student-container.hovered {
+  background-color: #FDFF73;
+}
+.uc-drag-container.uc-drag-container-editable .uc-group-score {
+  border-top: 1px solid #1A6718;
+}
+.proceed-container {
+  margin: 10px 0;
+}
+.score-group {
+  width: 25%;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0 3px;
+  text-align: center;
+}
+.score-group .score-group-title {
+  text-align: center;
+  font-size: 16px;
+}
+.score-group input,
+.score-group select {
+  margin: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: .3em;
+}
+.score-group input:focus,
+.score-group select:focus {
+  background-color: #fff;
+}
+article.uc_activity .activity-title {
+  font-family: SAF;
+  font-size: 3em;
+  color: #ffffff;
+  text-align: center;
+  background-color: #99CC33;
+  padding: .5em 0 .5em;
+}
+article.uc_activity .activity-class-data {
+  margin-top: 1em;
+}
+article.uc_activity .activity-class-data .activity-class-data-details {
+  margin-top: 1em;
+}
+.activity-awards-container .award-container {
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+}
+.activity-awards-container .award-container .award {
+  color: #fff;
+  width: 100%;
+  padding-top: 133%;
+  box-sizing: border-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.activity-awards-container .award-container .award.completion-award {
+  background-image: url('assets/img/awards/Completion-Award.png');
+}
+.activity-awards-container .award-container .award.teamwork-award {
+  background-image: url('assets/img/awards/Teamwork-Award.png');
+}
+.activity-awards-container .award-container .award.team-winner.school {
+  background-image: url('assets/img/awards/team-winner/School-Team-Winner.png');
+}
+.activity-awards-container .award-container .award.team-winner.school.at-risk {
+  background-image: url('assets/img/awards/team-winner/School-Team-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.team-winner.school.esl {
+  background-image: url('assets/img/awards/team-winner/School-Team-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.team-winner.city {
+  background-image: url('assets/img/awards/team-winner/City-Team-Winner.png');
+}
+.activity-awards-container .award-container .award.team-winner.city.at-risk {
+  background-image: url('assets/img/awards/team-winner/City-Team-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.team-winner.city.esl {
+  background-image: url('assets/img/awards/team-winner/City-Team-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.team-winner.county {
+  background-image: url('assets/img/awards/team-winner/County-Team-Winner.png');
+}
+.activity-awards-container .award-container .award.team-winner.county.at-risk {
+  background-image: url('assets/img/awards/team-winner/County-Team-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.team-winner.county.esl {
+  background-image: url('assets/img/awards/team-winner/County-Team-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.team-winner.state {
+  background-image: url('assets/img/awards/team-winner/State-Team-Winner.png');
+}
+.activity-awards-container .award-container .award.team-winner.state.at-risk {
+  background-image: url('assets/img/awards/team-winner/State-Team-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.team-winner.state.esl {
+  background-image: url('assets/img/awards/team-winner/State-Team-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.team-winner.country {
+  background-image: url('assets/img/awards/team-winner/Country-Team-Winner.png');
+}
+.activity-awards-container .award-container .award.team-winner.country.at-risk {
+  background-image: url('assets/img/awards/team-winner/Country-Team-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.team-winner.country.esl {
+  background-image: url('assets/img/awards/team-winner/Country-Team-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.team-winner.global {
+  background-image: url('assets/img/awards/team-winner/Global-Team-Winner.png');
+}
+.activity-awards-container .award-container .award.team-winner.global.at-risk {
+  background-image: url('assets/img/awards/team-winner/Global-Team-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.team-winner.global.esl {
+  background-image: url('assets/img/awards/team-winner/Global-Team-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.team-top-10.school {
+  background-image: url('assets/img/awards/team-top-10/School-Team-10.png');
+}
+.activity-awards-container .award-container .award.team-top-10.school.at-risk {
+  background-image: url('assets/img/awards/team-top-10/School-Team-10-AR.png');
+}
+.activity-awards-container .award-container .award.team-top-10.school.esl {
+  background-image: url('assets/img/awards/team-top-10/School-Team-10-ESL.png');
+}
+.activity-awards-container .award-container .award.team-top-10.city {
+  background-image: url('assets/img/awards/team-top-10/City-Team-10.png');
+}
+.activity-awards-container .award-container .award.team-top-10.city.at-risk {
+  background-image: url('assets/img/awards/team-top-10/City-Team-10-AR.png');
+}
+.activity-awards-container .award-container .award.team-top-10.city.esl {
+  background-image: url('assets/img/awards/team-top-10/City-Team-10-ESL.png');
+}
+.activity-awards-container .award-container .award.team-top-10.county {
+  background-image: url('assets/img/awards/team-top-10/County-Team-10.png');
+}
+.activity-awards-container .award-container .award.team-top-10.county.at-risk {
+  background-image: url('assets/img/awards/team-top-10/County-Team-10-AR.png');
+}
+.activity-awards-container .award-container .award.team-top-10.county.esl {
+  background-image: url('assets/img/awards/team-top-10/County-Team-10-ESL.png');
+}
+.activity-awards-container .award-container .award.team-top-10.state {
+  background-image: url('assets/img/awards/team-top-10/State-Team-10.png');
+}
+.activity-awards-container .award-container .award.team-top-10.state.at-risk {
+  background-image: url('assets/img/awards/team-top-10/State-Team-10-AR.png');
+}
+.activity-awards-container .award-container .award.team-top-10.state.esl {
+  background-image: url('assets/img/awards/team-top-10/State-Team-10-ESL.png');
+}
+.activity-awards-container .award-container .award.team-top-10.country {
+  background-image: url('assets/img/awards/team-top-10/Country-Team-10.png');
+}
+.activity-awards-container .award-container .award.team-top-10.country.at-risk {
+  background-image: url('assets/img/awards/team-top-10/Country-Team-10-AR.png');
+}
+.activity-awards-container .award-container .award.team-top-10.country.esl {
+  background-image: url('assets/img/awards/team-top-10/Country-Team-10-ESL.png');
+}
+.activity-awards-container .award-container .award.team-top-10.global {
+  background-image: url('assets/img/awards/team-top-10/Global-Team-10.png');
+}
+.activity-awards-container .award-container .award.team-top-10.global.at-risk {
+  background-image: url('assets/img/awards/team-top-10/Global-Team-10-AR.png');
+}
+.activity-awards-container .award-container .award.team-top-10.global.esl {
+  background-image: url('assets/img/awards/team-top-10/Global-Team-10-ESL.png');
+}
+.activity-awards-container .award-container .award.class-winner.school {
+  background-image: url('assets/img/awards/class-winner/School-Winner.png');
+}
+.activity-awards-container .award-container .award.class-winner.school.at-risk {
+  background-image: url('assets/img/awards/class-winner/School-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.class-winner.school.esl {
+  background-image: url('assets/img/awards/class-winner/School-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.class-winner.city {
+  background-image: url('assets/img/awards/class-winner/City-Winner.png');
+}
+.activity-awards-container .award-container .award.class-winner.city.at-risk {
+  background-image: url('assets/img/awards/class-winner/City-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.class-winner.city.esl {
+  background-image: url('assets/img/awards/class-winner/City-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.class-winner.county {
+  background-image: url('assets/img/awards/class-winner/County-Winner.png');
+}
+.activity-awards-container .award-container .award.class-winner.county.at-risk {
+  background-image: url('assets/img/awards/class-winner/County-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.class-winner.county.esl {
+  background-image: url('assets/img/awards/class-winner/County-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.class-winner.state {
+  background-image: url('assets/img/awards/class-winner/State-Winner.png');
+}
+.activity-awards-container .award-container .award.class-winner.state.at-risk {
+  background-image: url('assets/img/awards/class-winner/State-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.class-winner.state.esl {
+  background-image: url('assets/img/awards/class-winner/State-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.class-winner.country {
+  background-image: url('assets/img/awards/class-winner/Country-Winner.png');
+}
+.activity-awards-container .award-container .award.class-winner.country.at-risk {
+  background-image: url('assets/img/awards/class-winner/Country-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.class-winner.country.esl {
+  background-image: url('assets/img/awards/class-winner/Country-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.class-winner.global {
+  background-image: url('assets/img/awards/class-winner/Global-Winner.png');
+}
+.activity-awards-container .award-container .award.class-winner.global.at-risk {
+  background-image: url('assets/img/awards/class-winner/Global-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.class-winner.global.esl {
+  background-image: url('assets/img/awards/class-winner/Global-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.class-top-10.school {
+  background-image: url('assets/img/awards/class-top-10/School-10.png');
+}
+.activity-awards-container .award-container .award.class-top-10.school.at-risk {
+  background-image: url('assets/img/awards/class-top-10/School-10-AR.png');
+}
+.activity-awards-container .award-container .award.class-top-10.school.esl {
+  background-image: url('assets/img/awards/class-top-10/School-10-ESL.png');
+}
+.activity-awards-container .award-container .award.class-top-10.city {
+  background-image: url('assets/img/awards/class-top-10/City-10.png');
+}
+.activity-awards-container .award-container .award.class-top-10.city.at-risk {
+  background-image: url('assets/img/awards/class-top-10/City-10-AR.png');
+}
+.activity-awards-container .award-container .award.class-top-10.city.esl {
+  background-image: url('assets/img/awards/class-top-10/City-10-ESL.png');
+}
+.activity-awards-container .award-container .award.class-top-10.county {
+  background-image: url('assets/img/awards/class-top-10/County-10.png');
+}
+.activity-awards-container .award-container .award.class-top-10.county.at-risk {
+  background-image: url('assets/img/awards/class-top-10/County-10-AR.png');
+}
+.activity-awards-container .award-container .award.class-top-10.county.esl {
+  background-image: url('assets/img/awards/class-top-10/County-10-ESL.png');
+}
+.activity-awards-container .award-container .award.class-top-10.state {
+  background-image: url('assets/img/awards/class-top-10/State-10.png');
+}
+.activity-awards-container .award-container .award.class-top-10.state.at-risk {
+  background-image: url('assets/img/awards/class-top-10/State-10-AR.png');
+}
+.activity-awards-container .award-container .award.class-top-10.state.esl {
+  background-image: url('assets/img/awards/class-top-10/State-10-ESL.png');
+}
+.activity-awards-container .award-container .award.class-top-10.country {
+  background-image: url('assets/img/awards/class-top-10/Country-10.png');
+}
+.activity-awards-container .award-container .award.class-top-10.country.at-risk {
+  background-image: url('assets/img/awards/class-top-10/Country-10-AR.png');
+}
+.activity-awards-container .award-container .award.class-top-10.country.esl {
+  background-image: url('assets/img/awards/class-top-10/Country-10-ESL.png');
+}
+.activity-awards-container .award-container .award.class-top-10.global {
+  background-image: url('assets/img/awards/class-top-10/Global-10.png');
+}
+.activity-awards-container .award-container .award.class-top-10.global.at-risk {
+  background-image: url('assets/img/awards/class-top-10/Global-10-AR.png');
+}
+.activity-awards-container .award-container .award.class-top-10.global.esl {
+  background-image: url('assets/img/awards/class-top-10/Global-10-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-1 {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-Winner.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-1.at-risk {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-1.esl {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-2 {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-2nd.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-2.at-risk {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-2nd-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-2.esl {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-2nd-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-3 {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-3rd.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-3.at-risk {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-3rd-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-3.esl {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-3rd-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-4 {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-4th.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-4.at-risk {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-4th-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-4.esl {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-4th-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-5 {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-5th.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-5.at-risk {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-5th-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-5.esl {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-5th-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-6 {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-6th.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-6.at-risk {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-6th-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.global-6.esl {
+  background-image: url('assets/img/awards/LC-Global/LC-Global-6th-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-1 {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-Winner.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-1.at-risk {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-1.esl {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-2 {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-2nd.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-2.at-risk {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-2nd-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-2.esl {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-2nd-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-3 {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-3rd.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-3.at-risk {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-3rd-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-3.esl {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-3rd-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-4 {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-4th.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-4.at-risk {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-4th-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-4.esl {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-4th-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-5 {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-5th.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-5.at-risk {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-5th-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-5.esl {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-5th-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-6 {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-6th.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-6.at-risk {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-6th-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.country-6.esl {
+  background-image: url('assets/img/awards/LC-Country/LC-Country-6th-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-1 {
+  background-image: url('assets/img/awards/LC-State/LC-State-Winner.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-1.at-risk {
+  background-image: url('assets/img/awards/LC-State/LC-State-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-1.esl {
+  background-image: url('assets/img/awards/LC-State/LC-State-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-2 {
+  background-image: url('assets/img/awards/LC-State/LC-State-2nd.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-2.at-risk {
+  background-image: url('assets/img/awards/LC-State/LC-State-2nd-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-2.esl {
+  background-image: url('assets/img/awards/LC-State/LC-State-2nd-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-3 {
+  background-image: url('assets/img/awards/LC-State/LC-State-3rd.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-3.at-risk {
+  background-image: url('assets/img/awards/LC-State/LC-State-3rd-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-3.esl {
+  background-image: url('assets/img/awards/LC-State/LC-State-3rd-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-4 {
+  background-image: url('assets/img/awards/LC-State/LC-State-4th.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-4.at-risk {
+  background-image: url('assets/img/awards/LC-State/LC-State-4th-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-4.esl {
+  background-image: url('assets/img/awards/LC-State/LC-State-4th-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-5 {
+  background-image: url('assets/img/awards/LC-State/LC-State-5th.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-5.at-risk {
+  background-image: url('assets/img/awards/LC-State/LC-State-5th-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-5.esl {
+  background-image: url('assets/img/awards/LC-State/LC-State-5th-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-6 {
+  background-image: url('assets/img/awards/LC-State/LC-State-6th.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-6.at-risk {
+  background-image: url('assets/img/awards/LC-State/LC-State-6th-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.state-6.esl {
+  background-image: url('assets/img/awards/LC-State/LC-State-6th-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-1 {
+  background-image: url('assets/img/awards/LC-County/LC-County-Winner.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-1.at-risk {
+  background-image: url('assets/img/awards/LC-County/LC-County-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-1.esl {
+  background-image: url('assets/img/awards/LC-County/LC-County-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-2 {
+  background-image: url('assets/img/awards/LC-County/LC-County-2.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-2.at-risk {
+  background-image: url('assets/img/awards/LC-County/LC-County-2-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-2.esl {
+  background-image: url('assets/img/awards/LC-County/LC-County-2-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-3 {
+  background-image: url('assets/img/awards/LC-County/LC-County-3.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-3.at-risk {
+  background-image: url('assets/img/awards/LC-County/LC-County-3-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-3.esl {
+  background-image: url('assets/img/awards/LC-County/LC-County-3-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-4 {
+  background-image: url('assets/img/awards/LC-County/LC-County-4.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-4.at-risk {
+  background-image: url('assets/img/awards/LC-County/LC-County-4-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-4.esl {
+  background-image: url('assets/img/awards/LC-County/LC-County-4-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-5 {
+  background-image: url('assets/img/awards/LC-County/LC-County-5.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-5.at-risk {
+  background-image: url('assets/img/awards/LC-County/LC-County-5-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-5.esl {
+  background-image: url('assets/img/awards/LC-County/LC-County-5-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-6 {
+  background-image: url('assets/img/awards/LC-County/LC-County-6.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-6.at-risk {
+  background-image: url('assets/img/awards/LC-County/LC-County-6-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.county-6.esl {
+  background-image: url('assets/img/awards/LC-County/LC-County-6-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-1 {
+  background-image: url('assets/img/awards/LC-City/LC-City-Winner.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-1.at-risk {
+  background-image: url('assets/img/awards/LC-City/LC-City-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-1.esl {
+  background-image: url('assets/img/awards/LC-City/LC-City-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-2 {
+  background-image: url('assets/img/awards/LC-City/LC-City-2.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-2.at-risk {
+  background-image: url('assets/img/awards/LC-City/LC-City-2-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-2.esl {
+  background-image: url('assets/img/awards/LC-City/LC-City-2-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-3 {
+  background-image: url('assets/img/awards/LC-City/LC-City-3.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-3.at-risk {
+  background-image: url('assets/img/awards/LC-City/LC-City-3-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-3.esl {
+  background-image: url('assets/img/awards/LC-City/LC-City-3-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-4 {
+  background-image: url('assets/img/awards/LC-City/LC-City-4.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-4.at-risk {
+  background-image: url('assets/img/awards/LC-City/LC-City-4-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-4.esl {
+  background-image: url('assets/img/awards/LC-City/LC-City-4-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-5 {
+  background-image: url('assets/img/awards/LC-City/LC-City-5.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-5.at-risk {
+  background-image: url('assets/img/awards/LC-City/LC-City-5-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-5.esl {
+  background-image: url('assets/img/awards/LC-City/LC-City-5-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-6 {
+  background-image: url('assets/img/awards/LC-City/LC-City-6.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-6.at-risk {
+  background-image: url('assets/img/awards/LC-City/LC-City-6-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.city-6.esl {
+  background-image: url('assets/img/awards/LC-City/LC-City-6-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-1 {
+  background-image: url('assets/img/awards/LC-School/LC-School-Winner.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-1.at-risk {
+  background-image: url('assets/img/awards/LC-School/LC-School-Winner-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-1.esl {
+  background-image: url('assets/img/awards/LC-School/LC-School-Winner-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-2 {
+  background-image: url('assets/img/awards/LC-School/LC-School-2nd.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-2.at-risk {
+  background-image: url('assets/img/awards/LC-School/LC-School-2nd-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-2.esl {
+  background-image: url('assets/img/awards/LC-School/LC-School-2nd-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-3 {
+  background-image: url('assets/img/awards/LC-School/LC-School-3rd.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-3.at-risk {
+  background-image: url('assets/img/awards/LC-School/LC-School-3rd-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-3.esl {
+  background-image: url('assets/img/awards/LC-School/LC-School-3rd-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-4 {
+  background-image: url('assets/img/awards/LC-School/LC-School-4th.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-4.at-risk {
+  background-image: url('assets/img/awards/LC-School/LC-School-4th-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-4.esl {
+  background-image: url('assets/img/awards/LC-School/LC-School-4th-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-5 {
+  background-image: url('assets/img/awards/LC-School/LC-School-5th.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-5.at-risk {
+  background-image: url('assets/img/awards/LC-School/LC-School-5th-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-5.esl {
+  background-image: url('assets/img/awards/LC-School/LC-School-5th-ESL.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-6 {
+  background-image: url('assets/img/awards/LC-School/LC-School-6th.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-6.at-risk {
+  background-image: url('assets/img/awards/LC-School/LC-School-6th-AR.png');
+}
+.activity-awards-container .award-container .award.league-winner.school-6.esl {
+  background-image: url('assets/img/awards/LC-School/LC-School-6th-ESL.png');
+}
+#chart-average-container,
+#chart-ranking-container {
+  width: 100%;
+  height: 400px;
+}
+#chart-average-container .canvasjs-chart-credit,
+#chart-ranking-container .canvasjs-chart-credit {
+  display: none !important;
+}
+#chart-average-container .canvasjs-chart-tooltip,
+#chart-ranking-container .canvasjs-chart-tooltip {
+  line-height: 1.2em;
+}
+.activity-sheet {
+  -webkit-print-color-adjust: exact;
+  background-color: #eee8da;
+  width: 100%;
+  line-height: 1.5em;
+}
+.activity-sheet .print-block {
+  width: 8.5in;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+.activity-sheet .activity-sheet-inner {
+  padding: 250px 1in 0;
+  background: url(assets/img/head.png) top center no-repeat;
+  background-size: contain;
+  width: 8.5in;
+  margin: 0 auto;
+}
+.activity-sheet .activity-sheet-inner .activity-title {
+  text-align: center;
+  font-family: SAF;
+  font-size: 3em;
+}
+.activity-sheet .activity-sheet-inner .activity-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  page-break-inside: avoid;
+}
+.activity-sheet .activity-sheet-inner .activity-section .activity-section-image {
+  width: 78%;
+}
+.activity-sheet .teamwork-rubric {
+  border: 1px solid #9ecfdd;
+  background-color: #f2f2f2;
+  padding: .5em;
+  font-size: 14px;
+}
+.activity-sheet .teamwork-rubric .teamwork-rubric-title {
+  font-weight: bold;
+}
+.activity-sheet p {
+  page-break-inside: avoid;
+  margin: 0;
+  padding: .5em 0 .5em;
+}
+@media print {
+  @page {
+    margin: .25in;
+    background-color: #f2f2f2;
+  }
+  .print-block {
+    display: none;
+  }
+}
+.uc-scoring-table {
+  margin: 1.5em 0;
+  border: 1px solid #9ecfdd;
+  border-spacing: 0px;
+  width: 100%;
+  text-align: center;
+}
+.uc-scoring-table thead {
+  color: #fff;
+}
+.uc-scoring-table thead th {
+  line-height: 1.3em;
+  padding: .4em;
+}
+.uc-scoring-table thead th:nth-child(1),
+.uc-scoring-table thead th:nth-child(2) {
+  background-color: #2e979f;
+}
+.uc-scoring-table thead th.score-header {
+  background-color: #42bcc6;
+}
+.uc-scoring-table thead th.teamwork-score-header {
+  background-color: #ff9015;
+}
+.uc-scoring-table tbody tr {
+  background-color: #fff;
+}
+.uc-scoring-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.uc-scoring-table td,
+.uc-scoring-table th {
+  border-right: 1px solid #9ecfdd;
+}
+.uc-scoring-table td:last-child,
+.uc-scoring-table th:last-child {
+  border-right: none;
+}
+.uc-scoring-table td {
+  padding: .4em .1em;
+}
+.uc-scoring-table td:nth-child(1) {
+  width: 8%;
+}
+.uc-scoring-table td:nth-child(2) {
+  width: 45%;
+}
+.uc-school-marker-map-container {
+  width: 100%;
+  height: 450px;
+  border: 1px solid #99CC33;
+  margin-top: 10px;
+  margin-bottom: 17px;
+  position: relative;
+}
+.uc-school-marker-map-container .uc-school-marker-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.uc-school-marker-map-container .stemplayground-map-logo {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 140px;
+  height: 114px;
+  background: url("assets/img/logo-140x114.png") no-repeat top left;
+}
+.uc-school-marker-map-container .stemplayground-map-search {
+  position: absolute;
+  top: 4px;
+  left: 115px;
+}
+.uc-school-marker-map-container .stemplayground-map-search input {
+  background-color: #fff;
+  font: 13.3333px Arial;
+  border: 1px solid #eee;
+  padding: 8px 10px;
+  width: 270px;
+}
+.activity-banner {
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+
+/*# sourceMappingURL=style.css.map */
